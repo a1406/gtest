@@ -184,7 +184,8 @@ static void redis_test_accept(aeEventLoop *el, int fd, void *privdata, int mask)
 void redis_test_init(int port)
 {
 	int fd[16];
-	int count;
+	int count = 0;
+	
     if (listenToPort(port, &fd[0], &count) == C_ERR)
         exit(1);
 	int i;
